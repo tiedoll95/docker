@@ -1,13 +1,15 @@
 #!/bin/bash
 
+
 echo "#################################################################"
-echo "#Script Name	:     script install ELK version 6 on centos 7    #"
-echo "#Description	:auto install and configure ELK version 6 Basic   #"
+echo "#Script Name  : script install docker  on centos 7              #"
+echo "#Description  :auto install and configure ELK version 6 Basic   #"
 echo "#Args         :                                                 #"
-echo "#Author      	:Nguyen Duc Huy                                   #"
+echo "#Author       :Nguyen Duc Huy                                   #"
 echo "#Email        :tiedoll96@gmail.com                              #"
-echo "#website	  	:https://nguyeduchuy.wordpress.com                #"
+echo "#website      :https://nguyeduchuy.wordpress.com                #"
 echo "#################################################################"
+
 
 echo "####-----install docker CE on Centos7 ------#####"
 sleep 2
