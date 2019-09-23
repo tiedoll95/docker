@@ -50,6 +50,8 @@ echo  "#####-----install done ------#####3"
 systemctl start docker
 systemctl enable docker
 docker run hello-world
+echo "#####-----use Docker as a non-root userr\-----###### "
+usermod -aG docker $USER
 sleep 3
 echo "#####-----Using docker after reboot server-----###### "
 sleep 5
