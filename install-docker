@@ -1,0 +1,54 @@
+#!/bin/bash
+
+echo "#################################################################"
+echo "#Script Name	:     script install ELK version 6 on centos 7    #"
+echo "#Description	:auto install and configure ELK version 6 Basic   #"
+echo "#Args         :                                                 #"
+echo "#Author      	:Nguyen Duc Huy                                   #"
+echo "#Email        :tiedoll96@gmail.com                              #"
+echo "#website	  	:https://nguyeduchuy.wordpress.com                #"
+echo "#################################################################"
+
+echo "####-----install docker CE on Centos7 ------#####"
+sleep 2
+echo "####-----xoa docker version cu --------#####"
+sleep 2
+sudo yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-engine
+sleep 1 
+echo "###---------remove done ----------###" 
+echo "###---------Install docker CE ----------###"
+sleep 2
+echo "###---------Update server ----------###"
+sleep 1
+yum update -y
+echo "###---------install packet ----------###"
+sleep 1
+yum install -y yum-utils \
+  device-mapper-persistent-data \
+  lvm2
+echo "###---------add repository ----------###"
+yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+    
+echo "###---------Enable kho luu tru docker----------###"
+yum-config-manager --enable docker-ce-nightly
+echo "###---------Install docker CE----------###"
+sleep 2
+yum install -y docker-ce docker-ce-cli containerd.io
+
+echo  "#####-----install done ------#####3"
+systemctl start docker
+systemctl enable docker
+docker run hello-world
+sleep 3
+echo "#####-----Using docker after reboot server-----###### "
+sleep 5
+
