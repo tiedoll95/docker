@@ -3,7 +3,7 @@
 
 echo "#################################################################"
 echo "#Script Name  : script install docker  on centos 7              #"
-echo "#Description  :auto install and configure ELK version 6 Basic   #"
+echo "#Description  :auto install and configure docker centos7        #"
 echo "#Args         :                                                 #"
 echo "#Author       :Nguyen Duc Huy                                   #"
 echo "#Email        :tiedoll96@gmail.com                              #"
